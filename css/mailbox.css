@@ -1,0 +1,78 @@
+	.container{
+		max-width: 1600px;
+		margin: 0 auto;
+		width: 900px;
+	}
+
+	.options{
+		margin: 0;
+		float: left;
+    background-color: #f7f7f7;
+    width: 180px;
+    height: 430px;
+    border: 1px solid #ccc;
+	}
+ 
+	p.head{
+		font-size: 18px;
+		font-weight: strong;
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		margin-left: 25px;
+		color: black;
+	}
+
+
+	.content{
+		width: 700px;
+		height: 430px;
+		border: 1px solid #ccc;
+		float: left;
+		margin: 0;
+	}
+
+	.clear{
+		clear: both;
+	}
+
+	ul.folders li{
+		list-style-type: none;
+		margin-top: 20px;
+	}
+
+	ul.folders li a{
+		text-decoration: none;
+		color: #191919;
+		padding:10px;
+	}
+/*
+	ul.folders li a:hover{
+		background: #eee;
+	}
+	ul.folders li a:focus{
+		background: #eee;
+	}
+	ul.folders li a:active{
+		background: #eee;
+	}
+*/
+
+
+	ul.folders li a:hover,ul.folders li a:focus,ul.folders li a:active{
+		background: #eee;
+		outline: 0;
+		border: 0;
+	}
+
+	span.inbox{
+		margin: 0;
+		margin-left: 30px;
+		color: #191919;
+	}
+
+	span.spam{
+		margin: 0;
+		margin-left: 30px;
+		color: #191919;
+	}

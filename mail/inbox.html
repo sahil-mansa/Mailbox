@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="mailapp">
+<head>
+<link rel="stylesheet" type="text/css" href="/home/dev6/Downloads/Sahil/Angular JS 101/mailbox/mail/css/inbox.css">
+</head>
+<body ng-controller="InboxController">
+
+	<table style="width:100%">
+		<tr>
+			<th>Date</th>
+			<th>Subject</th>		
+			<th>From</th>
+			<th>To</th>
+		</tr>
+		<tr id="mails" ng-repeat="mail in inboxmails" ng-click="changeclickstatus(mail)" ng-class="mail.click?'selected':'unselected'">
+			<td>{{mail.date}}</td>
+			<td>{{mail.subject}}</td>		
+			<td>{{mail.from}}</td>
+			<td>{{mail.to}}</td>
+		</tr>
+	</table>
+
+
+<div ng-repeat="mail in inboxmails" ng-show="mail.click">
+  <dl>
+    <dt>From</dt>
+    <dd>{{mail.from}}</dd>
+    <dt>To</dt>
+    <dd>{{mail.to}}</dd>
+    <dt>Date</dt>
+    <dd>{{mail.date}}</dd>
+  </dl>
+  <hr></hr>
+  <h4>{{mail.subject}}</h4>
+  <p>{{mail.body}}</p>
+
+</div>
+<p class="url">URL: {{sendpath}}</p>
+
+
+<!-- <div class="debug">
+<p class="text-info">{{ inboxmails | json}}</p>
+</div>
+ -->
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="mailapp">
+<head>
+<link rel="stylesheet" type="text/css" type="text/css" href="/home/dev6/Downloads/Sahil/Angular JS 101/mailbox/mail/css/spam.css">
+</head>
+<body ng-controller="SpamController">
+
+	<table style="width:100%">
+		<tr>
+			<th>Date</th>
+			<th>Subject</th>		
+			<th>From</th>
+			<th>To</th>
+		</tr>
+		<tr ng-repeat="mail in spammails" ng-click="changeclickstatus(mail)" ng-class="mail.click?'selected':'unselected'">
+
+			<td>{{mail.date}}</td>
+			<td>{{mail.subject}}</td>		
+			<td>{{mail.from}}</td>
+			<td>{{mail.to}}</td>
+		</tr>
+
+	</table>
+
+
+<div ng-repeat="mail in spammails" ng-show="mail.click">
+  <dl>
+    <dt>From</dt>
+    <dd>{{mail.from}}</dd>
+    <dt>To</dt>
+    <dd>{{mail.to}}</dd>
+    <dt>Date</dt>
+    <dd>{{mail.date}}</dd>
+  </dl>
+  <hr></hr>
+  <h4>{{mail.subject}}</h4>
+  <p>{{mail.body}}</p>
+</div>
+
+<p class="url">URL: {{sendpath}}</p>
+
+<!-- <div class="debug">
+<p class="text-info">{{ spammails | json}}</p>
+</div> -->
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="mailapp">
+<head>
+<link rel="stylesheet" type="text/css" href="css/mailbox.css">
+</head>
+
+<body>
+<div class="mailbox">
+<div class="container">
+<div class="options">
+
+<p class="head">MAILBOXES</p>
+
+
+<ul class="folders">
+	<li ng-controller="InboxController"><a href="#inbox" ng-click="setfalse()">Inbox <span class="inbox">{{inboxmails.length}}</span></a></li>
+	<li ng-controller="SpamController"><a href="#spam" ng-click="setfalse()">Spam <span class="spam">{{spammails.length}}</span></a></li>
+	<li ng-controller="SentController"><a href="#sent-mail" ng-click="setfalse()">Sent Mail {{sentmails.length}}</a></li>
+</ul>
+	
+</div>
+<div ng-view class="content">
+
+</div>
+
+<div class="clear"></div>
+
+<br><br><br><br><br>
+<!-- <div class="debug" ng-controller="SentController">
+<p class="text-info">{{ sentmails | json}}</p>
+</div> -->
+
+</div>
+
+</div>
+
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-route.min.js"></script>
+<script type="text/javascript" src="js/mailbox.js"></script>
+</body>
+</html>
